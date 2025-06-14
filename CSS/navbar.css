@@ -1,0 +1,71 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding: 0 30px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 1;
+  transition: background-color 0.5s ease, opacity 0.3s ease;
+}
+
+.logo {
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 2rem;
+  color: #f5f0e6;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  height: 100%;
+}
+
+.nav-links a {
+  font-family: "Sour Gummy", sans-serif;
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #f5f0e6;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 15%;
+  bottom: 0;
+  width: 70%;
+  height: 2px;
+  background-color: rgba(245, 240, 230, 1);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+  transform: scale(1.15);
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar.scrolled {
+  background-color: #4b2e1e; 
+   opacity: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); 
+}
