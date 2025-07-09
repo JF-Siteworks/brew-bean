@@ -1,0 +1,38 @@
+.map {
+    position: static;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.map iframe {
+    border-radius: 24px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.map-overlay {
+    position: absolute;
+    width: 65%;
+    height: 500px;
+    background-color: #4b2e1e99;
+    border-radius: 24px;
+    pointer-events: none;
+    border: none;
+}
+
+.map-overlay:hover {
+    transform: scale(0);
+}
+
+.map-disclaimer {
+    text-align: center;
+    font-size: 0.6rem;
+    color: #4b2e1e;
+    margin-top: 8px;
+    z-index: 1000;
+    transform: translateY(-54px);
+    font-family: 'Sour Gummy', sans-serif;
+}
